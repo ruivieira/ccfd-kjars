@@ -2,34 +2,18 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>dev.ruivieira</groupId>
+
+  <parent>
+    <groupId>dev.ruivieira</groupId>
+    <artifactId>ccdf-kjars</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+
   <artifactId>ccd-standard-kjar</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>kjar</packaging>
   <name>ccd-standard-kjar</name>
-  <properties>
-    <maven.compiler.target>1.8</maven.compiler.target>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <version.org.kie>7.31.0.Final</version.org.kie>
-  </properties>
-  <distributionManagement>
-    <repository>
-      <id>nexus-ccfd</id>
-      <url>${env.NEXUS_URL}/nexus/content/repositories/snapshots</url>
-    </repository>
-    <snapshotRepository>
-      <id>nexus-ccfd</id>
-      <url>${env.NEXUS_URL}/nexus/content/repositories/snapshots</url>
-    </snapshotRepository>
-  </distributionManagement>
-  <repositories>
-    <repository>
-      <id>jboss-public-repository-group</id>
-      <name>JBoss Public Repository Group</name>
-      <url>https://repository.jboss.org/nexus/content/groups/public/</url>
-    </repository>
-  </repositories>
+
   <build>
     <plugins>
       <plugin>
